@@ -1,11 +1,11 @@
 :root {
-  --ink:#172c32;
-  --muted:#54646a;
-  --accent:#176958;
-  --accent-light:#e5eee7;
-  --paper:#f8f7f3;
+  --ink:#302b30;
+  --muted:#655c61;
+  --accent:#874051;
+  --accent-light:#f1e5e8;
+  --paper:#faf7f4;
   --white:#fff;
-  --line:#dedfd7;
+  --line:#e4dbd9;
   --serif:Georgia,'Times New Roman',serif;
   --sans:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
@@ -122,7 +122,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
   margin:0 0 20px;
 }
 .eyebrow.light {
-  color:#a8d7c2;
+  color:#e7bbc8;
 }
 h1,h2,h3,p {
   margin-top:0;
@@ -212,13 +212,13 @@ h3 {
   line-height:1.5;
 }
 .button:hover {
-  background:#114e43;
+  background:#683342;
   color:#fff;
 }
 .button.secondary {
   background:transparent;
   color:var(--ink);
-  border-color:#a7b2ad;
+  border-color:#bcaab0;
 }
 .button.secondary:hover {
   background:var(--accent-light);
@@ -320,13 +320,13 @@ h3 {
   margin-bottom:10px;
 }
 .callout p {
-  color:#c6d3d1;
+  color:#ded0d6;
   margin:0;
 }
 .callout .button {
-  background:#d7e8dd;
+  background:#f0dde3;
   color:var(--ink);
-  border-color:#d7e8dd;
+  border-color:#f0dde3;
   white-space:nowrap;
 }
 .site-footer {
@@ -589,7 +589,7 @@ h3 {
   padding:13px 0;
 }
 .project-image {
-  background:#edf0ec;
+  background:#f1ebe8;
   border:1px solid var(--line);
   border-radius:6px;
   padding:20px;
@@ -888,5 +888,44 @@ h3 {
   }
   * {
     transition:none!important;
+  }
+}
+
+/* Portrait framing keeps the original photograph intact. */
+.portrait-frame {
+  width:100%;
+  aspect-ratio:4 / 4.7;
+  overflow:hidden;
+  border-radius:140px 140px 8px 8px;
+  background:#302b30;
+}
+.portrait-frame img {
+  width:100%;
+  height:100%;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:68% 30%;
+  border-radius:0;
+  transform:scale(1.32);
+  transform-origin:68% 30%;
+}
+.portrait-about {
+  border-radius:8px;
+  aspect-ratio:4 / 4.9;
+}
+@media (max-width:680px) {
+  .hero-photo .portrait-frame {
+    aspect-ratio:1.15;
+    border-radius:100px 100px 6px 6px;
+  }
+  .portrait-about {
+    max-height:420px;
+    aspect-ratio:1;
+  }
+  .portrait-frame img {
+    max-height:none;
+    aspect-ratio:auto;
+    border-radius:0;
   }
 }
