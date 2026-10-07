@@ -16,7 +16,7 @@ The five pages share `assets/css/style.css` and `assets/js/main.js`. Navigation 
 
 Update the work history in `resume.html`, project descriptions in `portfolio.html`, and featured work in `index.html`. Contact links appear in the shared header and footer markup and in `contact.html`. Keep these consistent across the pages.
 
-The contact page uses email, phone, and LinkedIn links. It does not require a form service. The portfolio includes archived screenshots within expandable sections.
+The contact page uses email and phone links. It does not require a form service. The portfolio includes archived screenshots within expandable sections.
 
 ## Publishing
 
